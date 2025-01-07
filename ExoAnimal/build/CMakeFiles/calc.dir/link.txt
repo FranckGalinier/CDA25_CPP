@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/calc.dir/src/main.cpp.o CMakeFiles/calc.dir/src/Animal.cpp.o CMakeFiles/calc.dir/src/Cat.cpp.o CMakeFiles/calc.dir/src/Dog.cpp.o -o calc 
