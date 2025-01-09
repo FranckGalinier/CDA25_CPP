@@ -1,15 +1,45 @@
-#include <iostream>
 #include <vector>
 #include <string>
 #include <fstream>
+#include <mysql_driver.h>
+#include <mysql_connection.h>
+#include <cppconn/statement.h>
+#include <cppconn/resultset.h>
+#include <cppconn/exception.h>
+#include <iostream>
 #include "Carnet.h"
+
 #define MAGENTA "\033[0;35m"
 #define RESET "\033[0m"
 
 using namespace std;
 
-
+  
 int main() {
+
+  try
+  {
+    // Création de la connexion
+    sql::mysql::MySQL_Driver* driver = sql::mysql::get_mysql_driver_instance();
+    std::unique_ptr<sql::Connection> con(driver->connect("tcp://127.0.0.1:3310", "cpp", "mycpp"));
+
+    //connexion à la bdd
+    con->setSchema("cpp");
+
+    //création de la table
+    std::unique_ptr<sql::Statement> stmt(con->createStatement());
+    stmt->execute("CREATE TABLE IF NOT EXISTS carnet("
+                    "id INT PRIMARY KEY AUTO_INCREMENT,"
+                    "nom VARCHAR(50) NOT NULL,"
+                    "tel VARCHAR(50) NOT NULL"
+                    ");");
+  }
+
+  catch(sql::SQLException &e)
+  {
+    std::cerr << "Erreur MySQL: " << e.what() << std::endl;
+
+  }
 
   int choix;
   Carnet carnet;

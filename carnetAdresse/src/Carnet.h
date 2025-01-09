@@ -2,10 +2,9 @@
 #define CARNET_H
 
 #include <vector>
-#include "json.hpp"
+#include <string>
 
 
-using json = nlohmann::json;
 using namespace std;
 
 struct Carnet {
@@ -16,8 +15,6 @@ struct Carnet {
   Carnet(string nom, string tel);
  
   void displaycontact();
-  void jsonToStruct(const json& j);
-  void addJsonArray(json& jsonArray) const;
   void addContact();
   void searchContact();
   void deleteContact();

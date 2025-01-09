@@ -1,0 +1,20 @@
+volumes:
+  cppmysql:
+
+networks:
+    wpnet:
+      driver: bridge
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: db
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "3310:3306"
+    volumes:
+      - cppmysql:/var/lib/mysql
+    command: '--default-authentication-plugin=mysql_native_password'
+    networks:
+      - wpnet
