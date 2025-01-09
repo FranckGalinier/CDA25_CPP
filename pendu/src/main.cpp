@@ -22,7 +22,7 @@ int main() {
     int score = 7; // number of tries
     string letterUsed; // letters already used in the game
 
-    while (score >= 0){//while score >= 0
+    while (score > 0){//while score >= 0
         drawPendu(score);
         cout << "Vous avez " << score << " essais" << endl;
 

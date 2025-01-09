@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/calc.dir/src/jsonLoader.cpp.o -o calc 

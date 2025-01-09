@@ -1,0 +1,43 @@
+[
+  {
+    "marque": "Peugeot",
+    "model": "208"
+  },
+  {
+    "marque": "Renault",
+    "model": "Clio"
+  },
+  {
+    "marque": "Citroen",
+    "model": "C3"
+  },
+  {
+    "marque": "Volkswagen",
+    "model": "Golf"
+  },
+  {
+    "marque": "Ford",
+    "model": "Fiesta"
+  },
+  {
+    "marque": "Opel",
+    "model": "Corsa"
+  },
+  {
+    "marque": "Toyota",
+    "model": "Yaris"
+  },
+  {
+    "marque": "Fiat",
+    "model": "500"
+  },
+  {
+    "marque": "Nissan",
+    "model": "Micra"
+  },
+  {
+    "marque": "Seat",
+    "model": "Ibiza"
+  }
+
+]
